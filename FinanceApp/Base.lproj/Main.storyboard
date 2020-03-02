@@ -50,7 +50,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyH-Sq-opL" userLabel="Loan Amount txtFld">
                                                                         <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -66,7 +66,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QF5-b0-nEH" userLabel="Interest txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -82,7 +82,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbP-N1-8RT" userLabel="Payment txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -98,7 +98,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-Tj-rA9" userLabel="Number of Years txtFld">
                                                                         <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -114,7 +114,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDN-3v-BGK" userLabel="Number of Payments txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -259,7 +259,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaT-Yb-Aei" userLabel="Mortgage Amount txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
                                                                             <action selector="mortgageAmountTxtFldChanged:" destination="kyf-V9-8qH" eventType="editingChanged" id="yBZ-4x-fEk"/>
                                                                         </connections>
@@ -278,7 +278,7 @@
                                                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6C-hh-Q2j" userLabel="Interest txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
                                                                             <action selector="interestTxtFldChanged:" destination="kyf-V9-8qH" eventType="editingChanged" id="HT1-dW-7i1"/>
                                                                         </connections>
@@ -297,7 +297,7 @@
                                                                     <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuP-7f-L1c" userLabel="Payment txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
                                                                             <action selector="paymentTxtFldChanged:" destination="kyf-V9-8qH" eventType="editingChanged" id="ZW8-5Z-3zA"/>
                                                                         </connections>
@@ -316,7 +316,7 @@
                                                                     <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGq-3t-LSq" userLabel="Number of Years txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
                                                                             <action selector="noOfYearsTxtFldChanged:" destination="kyf-V9-8qH" eventType="editingChanged" id="9FD-FI-OpY"/>
                                                                         </connections>
@@ -473,7 +473,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-YH-jvM" userLabel="Principal Amount txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -489,7 +489,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52U-kK-dDg" userLabel="Interest txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -505,7 +505,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-nS-QVj" userLabel="Payment txtFld">
                                                                         <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -521,7 +521,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-G9-paa" userLabel="Compounds per Year txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -537,7 +537,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcI-WK-X5f" userLabel="Payments per Year txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -553,7 +553,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gL8-r6-IOH" userLabel="Future Value txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -569,7 +569,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-Px-vfG" userLabel="Number of Payments txtFld">
                                                                         <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -714,7 +714,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kO-lH-e27" userLabel="Present Value txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -730,7 +730,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVs-uT-cAq" userLabel="Future Value txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -746,7 +746,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-eu-cSq" userLabel="Interest txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -762,7 +762,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nrw-L6-CrF" userLabel="Payment txtFld">
                                                                         <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -778,7 +778,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEw-lv-GEz" userLabel="No. Payments per Year txtFld">
                                                                         <rect key="frame" x="0.0" y="43" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -794,7 +794,7 @@
                                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-eS-exc" userLabel="Compounds per Year txtFld">
                                                                         <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
