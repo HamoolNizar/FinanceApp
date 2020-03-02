@@ -1,20 +1,19 @@
 //
-//  ViewController.swift
+//  MainTabBarController.swift
 //  FinanceApp
 //
-//  Created by Hamool Nizar on 2/15/20.
+//  Created by Hamool Nizar on 2/16/20.
 //  Copyright © 2020 Hamool Nizar. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
+class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
 }
-
