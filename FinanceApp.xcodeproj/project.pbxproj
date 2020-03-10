@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		987DF99824150CAB00B57673 /* InterestRateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987DF99724150CAB00B57673 /* InterestRateCalculator.swift */; };
+		987DF99A241534B100B57673 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 987DF999241534B100B57673 /* Validation.swift */; };
 		988581B123F9A30600A96873 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988581B023F9A30600A96873 /* MainTabBarController.swift */; };
 		988581B323F9A44300A96873 /* LoanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988581B223F9A44300A96873 /* LoanController.swift */; };
 		988581B523F9A46800A96873 /* MortgageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988581B423F9A46800A96873 /* MortgageController.swift */; };
@@ -16,8 +18,8 @@
 		9887ED0C240D18E500A9FD31 /* LoanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887ED0B240D18E500A9FD31 /* LoanModel.swift */; };
 		9887ED0E240D18FA00A9FD31 /* SavingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887ED0D240D18FA00A9FD31 /* SavingsModel.swift */; };
 		9887ED10240D192600A9FD31 /* CompoundInterestSavingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9887ED0F240D192600A9FD31 /* CompoundInterestSavingsModel.swift */; };
+		988A9F7D2416AD7800329471 /* DoubleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988A9F7C2416AD7800329471 /* DoubleInitializer.swift */; };
 		98A23009240981A40046ABAC /* MortgageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A23008240981A40046ABAC /* MortgageModel.swift */; };
-		98C5EDD92406E2AB00504838 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98C5EDD82406E2AB00504838 /* UITextFieldExtension.swift */; };
 		98F13F5823F857E100662AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F13F5723F857E100662AA6 /* AppDelegate.swift */; };
 		98F13F5A23F857E100662AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F13F5923F857E100662AA6 /* SceneDelegate.swift */; };
 		98F13F5C23F857E100662AA6 /* CompoundInterestSavingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F13F5B23F857E100662AA6 /* CompoundInterestSavingsController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		987DF99724150CAB00B57673 /* InterestRateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestRateCalculator.swift; sourceTree = "<group>"; };
+		987DF999241534B100B57673 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		988581B023F9A30600A96873 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		988581B223F9A44300A96873 /* LoanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanController.swift; sourceTree = "<group>"; };
 		988581B423F9A46800A96873 /* MortgageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageController.swift; sourceTree = "<group>"; };
@@ -36,8 +40,8 @@
 		9887ED0B240D18E500A9FD31 /* LoanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanModel.swift; sourceTree = "<group>"; };
 		9887ED0D240D18FA00A9FD31 /* SavingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavingsModel.swift; sourceTree = "<group>"; };
 		9887ED0F240D192600A9FD31 /* CompoundInterestSavingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundInterestSavingsModel.swift; sourceTree = "<group>"; };
+		988A9F7C2416AD7800329471 /* DoubleInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleInitializer.swift; sourceTree = "<group>"; };
 		98A23008240981A40046ABAC /* MortgageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortgageModel.swift; sourceTree = "<group>"; };
-		98C5EDD82406E2AB00504838 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		98F13F5423F857E100662AA6 /* FinanceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinanceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F13F5723F857E100662AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98F13F5923F857E100662AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,13 +63,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		987DF99624150C7200B57673 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				987DF99724150CAB00B57673 /* InterestRateCalculator.swift */,
+				987DF999241534B100B57673 /* Validation.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		988581AF23F9A2B100A96873 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				98F13F5B23F857E100662AA6 /* CompoundInterestSavingsController.swift */,
 				988581B023F9A30600A96873 /* MainTabBarController.swift */,
-				988581B223F9A44300A96873 /* LoanController.swift */,
 				988581B423F9A46800A96873 /* MortgageController.swift */,
+				988581B223F9A44300A96873 /* LoanController.swift */,
+				98F13F5B23F857E100662AA6 /* CompoundInterestSavingsController.swift */,
 				988581B623F9A47F00A96873 /* SavingsController.swift */,
 			);
 			path = Controller;
@@ -80,23 +93,23 @@
 			path = CustomNumpad;
 			sourceTree = "<group>";
 		};
+		988A9F7B2416ACFD00329471 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				988A9F7C2416AD7800329471 /* DoubleInitializer.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		98A2300724096FC60046ABAC /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				98A23008240981A40046ABAC /* MortgageModel.swift */,
 				9887ED0B240D18E500A9FD31 /* LoanModel.swift */,
-				9887ED0D240D18FA00A9FD31 /* SavingsModel.swift */,
 				9887ED0F240D192600A9FD31 /* CompoundInterestSavingsModel.swift */,
+				9887ED0D240D18FA00A9FD31 /* SavingsModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		98C5EDD72406E24D00504838 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				98C5EDD82406E2AB00504838 /* UITextFieldExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		98F13F4B23F857E100662AA6 = {
@@ -118,8 +131,9 @@
 		98F13F5623F857E100662AA6 /* FinanceApp */ = {
 			isa = PBXGroup;
 			children = (
+				988A9F7B2416ACFD00329471 /* Extension */,
+				987DF99624150C7200B57673 /* Utils */,
 				98A2300724096FC60046ABAC /* Model */,
-				98C5EDD72406E24D00504838 /* Extensions */,
 				988581B823FAB4CC00A96873 /* CustomNumpad */,
 				988581AF23F9A2B100A96873 /* Controller */,
 				98F13F5723F857E100662AA6 /* AppDelegate.swift */,
@@ -206,8 +220,9 @@
 			files = (
 				98F13F5C23F857E100662AA6 /* CompoundInterestSavingsController.swift in Sources */,
 				98A23009240981A40046ABAC /* MortgageModel.swift in Sources */,
-				98C5EDD92406E2AB00504838 /* UITextFieldExtension.swift in Sources */,
+				987DF99824150CAB00B57673 /* InterestRateCalculator.swift in Sources */,
 				988581B523F9A46800A96873 /* MortgageController.swift in Sources */,
+				988A9F7D2416AD7800329471 /* DoubleInitializer.swift in Sources */,
 				9887ED0C240D18E500A9FD31 /* LoanModel.swift in Sources */,
 				988581B323F9A44300A96873 /* LoanController.swift in Sources */,
 				98F13F5823F857E100662AA6 /* AppDelegate.swift in Sources */,
@@ -216,6 +231,7 @@
 				988581BA23FAC17300A96873 /* CustomNumpad.swift in Sources */,
 				9887ED0E240D18FA00A9FD31 /* SavingsModel.swift in Sources */,
 				988581B123F9A30600A96873 /* MainTabBarController.swift in Sources */,
+				987DF99A241534B100B57673 /* Validation.swift in Sources */,
 				98F13F5A23F857E100662AA6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

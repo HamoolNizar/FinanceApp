@@ -23,18 +23,20 @@ class MortgageController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var customNumpad: CustomNumpad!
     
     var mortgage = MortgageModel(mortgageAmount: nil, interest: nil, payement: nil, noOfYears: nil)
+    var validate = Validation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegates()
         retrievePastStoredDate()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
     
+    /// This function sets up UITextFieldDelegates for the textfields.
     func setDelegates() {
         mortgageAmountTxtFld.delegate = self
         interestTxtFld.delegate = self
@@ -42,6 +44,8 @@ class MortgageController: UIViewController, UITextFieldDelegate {
         noOfYearsTxtFld.delegate = self
     }
     
+    /// This function retreives the stored data from theuserdefaults.
+    /// Then the retireved data will be assigned to the appropriate textfields.
     func retrievePastStoredDate() {
         mortgage.retrieveMortgageData()
         
@@ -59,48 +63,94 @@ class MortgageController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    /// This function handles when the textfield begins editing.
+    /// In this function the currently active textfield will be assinged to the customNumpad textfield.
+    ///
+    /// - Parameter textField: TextField.
     func textFieldDidBeginEditing(_ textField: UITextField) {
         customNumpad.activeTextField = textField
+        textField.inputView = UIView()
     }
     
+    /// This function gets triggered each time this  textfield is being edited.
+    /// Inside this function we get the value from the textfield and assign it to the relavant object parameter.
+    ///
+    /// - Parameter sender: Mortgage Amount TextField.
     @IBAction func mortgageAmountTxtFldChanged(_ sender: UITextField) {
         mortgage.mortgageAmount =  getTextFieldValue(sender)
     }
     
+    /// This function gets triggered each time this  textfield is being edited.
+    /// Inside this function we get the value from the textfield and assign it to the relavant object parameter.
+    ///
+    /// - Parameter sender: Interest TextField.
     @IBAction func interestTxtFldChanged(_ sender: UITextField) {
         mortgage.interest =  getTextFieldValue(sender)
     }
     
+    /// This function gets triggered each time this  textfield is being edited.
+    /// Inside this function we get the value from the textfield and assign it to the relavant object parameter.
+    ///
+    /// - Parameter sender: Payment TextField.
     @IBAction func paymentTxtFldChanged(_ sender: UITextField) {
         mortgage.payment =  getTextFieldValue(sender)
     }
     
+    /// This function gets triggered each time this  textfield is being edited.
+    /// Inside this function we get the value from the textfield and assign it to the relavant object parameter.
+    ///
+    /// - Parameter sender: Number of Years TextField.
     @IBAction func noOfYearsTxtFldChanged(_ sender: UITextField) {
         mortgage.noOfYears =  getTextFieldValue(sender)
     }
     
+    /// This function gets triggered when the button is being clicked.
+    /// Inside this function we find the empty textfield and make calculation for the empty field.
+    ///
+    /// - Parameter sender: Calculate Button.
     @IBAction func calculateBtnHandler(_ sender: UIButton) {
-        if (isCalculatable(numTxtFld: 4)) {
+        if (isCalculatable(numTxtFld: 4) == 1) {
             calculateTargetElement(targetElement: findTargetElement())
-        } else {
-            print("FALSE")
             
-//            let alert = UIAlertController(title: "Missing Fields", message: "You can only leave one field empty!", preferredStyle: .alert)
-//            let done = UIAlertAction(title: "Ok", style: .default)
-//            alert.addAction(done)
-//            present(alert, animated: true, completion: nil)
+        } else if (isCalculatable(numTxtFld: 4) == 0){
+            clearAllTextFields()
+            
+        } else {
+            print("More than one text field is empty ! ")
+            displayAlert(title: "Multiple TextFields Unfilled !", message: "The number of fields left out blank are more than one and only one TextField is allowed to be empty ")
         }
     }
     
+    /// This function gets the textfield and extract the content from the textfield and validate the content.
+    ///
+    /// - Parameter sender: TextField.
+    /// - Returns: Double value from the TextField
     func getTextFieldValue(_ sender: UITextField) -> Double? {
         guard let txtFldContent = sender.text else { return nil }
-        guard let txtFldContentDouble = Double(txtFldContent) else { return nil}
+        let validator = validate.validateTxtFld(content: txtFldContent)
         
-        print("Value " + String(txtFldContentDouble))
-        return txtFldContentDouble
+        if (validator == 0) {
+            guard let txtFldContentDouble = Double(txtFldContent) else { return nil}
+            
+            print("Value " + String(txtFldContentDouble))
+            return txtFldContentDouble
+        } else if (validator == 1) {
+            displayAlert(title: "Warning !", message: "The double value inputted to the text fields should be greater than 0")
+            return nil
+        } else if (validator == 2) {
+            // TextField is Empty
+            return nil
+        } else {
+            displayAlert(title: "Error: Invalid Input !", message: "The text fields only accept numeric double values and any other character values should not be inputted in to the text fields")
+            return nil
+        }
     }
     
-    func isCalculatable(numTxtFld: Int) -> Bool {
+    /// This function figures out whether it is possible make calculations by examing the textfields.
+    ///
+    /// - Parameter numTxtFld: int.
+    /// - Returns: integer value of number of empty fields.
+    func isCalculatable(numTxtFld: Int) -> Int {
         var numEmptyTxtFld: Int = numTxtFld
         
         if mortgage.mortgageAmount != nil {
@@ -116,9 +166,12 @@ class MortgageController: UIViewController, UITextFieldDelegate {
             numEmptyTxtFld -= 1
         }
         
-        return numEmptyTxtFld == 1
+        return numEmptyTxtFld
     }
     
+    /// This function will find out which textfield is empty in the application
+    ///
+    /// - Returns: Integer value for the target element.
     func findTargetElement() -> Int {
         var foundElement: Int = 0
         
@@ -138,46 +191,75 @@ class MortgageController: UIViewController, UITextFieldDelegate {
         return foundElement
     }
     
+    /// This function handles the calculation of the textfield elements
+    /// Inside this function using a switch case will determine whci
+    ///
+    /// - Parameter targetElement: The integer value of the empty textfield.
     func calculateTargetElement(targetElement: Int) {
         
         switch MortgageElements(rawValue: targetElement)! {
-            case .mortgageAmount:
-                let mortgageAmount: Double = mortgage.calculateMortgageAmount()
-                
-                mortgageAmountTxtFld.text = String(format: "%.2f",mortgageAmount)
-                mortgage.mortgageAmount = mortgageAmount
-        
-                print("Calcuated Mortgage Amount : " + String(mortgageAmount))
-
-            case .interest:
-                let interest: Double = mortgage.calculateInterest()
-                
-                interestTxtFld.text = String(format: "%.2f",interest)
-                mortgage.interest = interest
-                
-                print("Calcuated Interest : " + String(interest))
+        case .mortgageAmount:
+            let mortgageAmount: Double = mortgage.calculateMortgageAmount()
             
-            case .payment:
-                let payment: Double = mortgage.calculatePayment()
-
-                paymentTxtFld.text = String(format: "%.2f",payment)
-                mortgage.payment = payment
-                
-                print("Calculated Payment : " + String(payment))
+            mortgageAmountTxtFld.text = String(format: "%.2f",mortgageAmount)
+            mortgage.mortgageAmount = mortgageAmount
             
-            case .noOfYears:
-                let noOfYears: Double = mortgage.calculateNoOfYears()
-
-                noOfYearsTxtFld.text = String(format: "%.2f",noOfYears)
-                mortgage.noOfYears = noOfYears
-                
-                print("Calculated Number Of Years : " + String(noOfYears))
+            print("Calcuated Mortgage Amount : " + String(mortgageAmount))
+            
+        case .interest:
+            let interest: Double = mortgage.calculateInterest()
+            
+            interestTxtFld.text = String(format: "%.2f",interest)
+            mortgage.interest = interest
+            
+            print("Calcuated Interest : " + String(interest))
+            
+        case .payment:
+            let payment: Double = mortgage.calculatePayment()
+            
+            paymentTxtFld.text = String(format: "%.2f",payment)
+            mortgage.payment = payment
+            
+            print("Calculated Payment : " + String(payment))
+            
+        case .noOfYears:
+            let noOfYears: Double = mortgage.calculateNoOfYears()
+            
+            noOfYearsTxtFld.text = String(format: "%.2f",noOfYears)
+            mortgage.noOfYears = noOfYears
+            
+            print("Calculated Number Of Years : " + String(noOfYears))
         }
         mortgage.storeMortgageData()
     }
     
-//    func calculateInterest() -> Double {
-//        return (mortgage.interest! / 100) / 12
-//    }
+    /// This function will display alert in the applcation with appropriate messages
+    ///
+    /// - Parameter title: The tite of the alert.
+    /// - Parameter message: The content of the alert.
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: { _ in}))
+        alert.addAction(UIAlertAction(title: "OK",
+                                      style: UIAlertAction.Style.default,
+                                      handler: {(_: UIAlertAction!) in
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    /// This function will reset all the textfields
+    func clearAllTextFields() {
+        
+        mortgageAmountTxtFld.text = String("")
+        mortgage.mortgageAmount = nil
+        interestTxtFld.text = String("")
+        mortgage.interest = nil
+        paymentTxtFld.text = String("")
+        mortgage.payment = nil
+        noOfYearsTxtFld.text = String("")
+        mortgage.noOfYears = nil
+        
+    }
     
 }

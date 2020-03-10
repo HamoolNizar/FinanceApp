@@ -22,99 +22,99 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tbd-Rw-U0X" userLabel="Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="585"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G3c-pO-nua" userLabel="Master Stack View">
-                                                        <rect key="frame" x="15" y="15" width="345" height="555"/>
+                                                        <rect key="frame" x="15" y="15" width="345" height="395"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="L79-U8-t7f">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="L79-U8-t7f" userLabel="Loan Stack View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syj-7t-gjm">
-                                                                        <rect key="frame" x="146" y="0.0" width="53.5" height="84"/>
+                                                                        <rect key="frame" x="146" y="0.0" width="53.5" height="71"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-Gs-oXR">
-                                                                <rect key="frame" x="0.0" y="94" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JWo-Gs-oXR" userLabel="Loan Amount Stack View">
+                                                                <rect key="frame" x="0.0" y="81" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOB-oY-VUh" userLabel="Loan Amount lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyH-Sq-opL" userLabel="Loan Amount txtFld">
-                                                                        <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 100000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AyH-Sq-opL" userLabel="Loan Amount txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="loanAmountTxtFldChanged:" destination="ubw-7Y-xYL" eventType="editingChanged" id="4sa-mj-mth"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-Fc-uUM">
-                                                                <rect key="frame" x="0.0" y="188.5" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Tnc-Fc-uUM" userLabel="Interest Stack View">
+                                                                <rect key="frame" x="0.0" y="162" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTy-pH-Sxp" userLabel="Interest lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QF5-b0-nEH" userLabel="Interest txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="7.5 " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QF5-b0-nEH" userLabel="Interest txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="interestTxtFldChanged:" destination="ubw-7Y-xYL" eventType="editingChanged" id="LGK-kR-ghT"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yYh-el-ijD">
-                                                                <rect key="frame" x="0.0" y="282.5" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yYh-el-ijD" userLabel="Payment Stack View">
+                                                                <rect key="frame" x="0.0" y="243" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iO3-gi-zaI" userLabel="Payment lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbP-N1-8RT" userLabel="Payment txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 500" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DbP-N1-8RT" userLabel="Payment txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="paymentTxtFldChanged:" destination="ubw-7Y-xYL" eventType="editingChanged" id="jNX-SY-kmu"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Kr-oD-imT">
-                                                                <rect key="frame" x="0.0" y="376.5" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Kr-oD-imT" userLabel="Number of Payments Stack View">
+                                                                <rect key="frame" x="0.0" y="324" width="345" height="71"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esb-YO-5BI" userLabel="Number of Years lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Payments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esb-YO-5BI" userLabel="Number of Payments lbl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-Tj-rA9" userLabel="Number of Years txtFld">
-                                                                        <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="12" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZMF-Tj-rA9" userLabel="Number of Payments txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Nle-TY-KQE">
-                                                                <rect key="frame" x="0.0" y="471" width="345" height="84"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Payments - Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFg-gg-afW" userLabel="Number of Payments lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bDN-3v-BGK" userLabel="Number of Payments txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="noOfPaymentsTxtFldChanged:" destination="ubw-7Y-xYL" eventType="editingChanged" id="ksf-Bg-UZa"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -127,7 +127,7 @@
                                                     <constraint firstItem="G3c-pO-nua" firstAttribute="top" secondItem="tbd-Rw-U0X" secondAttribute="top" constant="15" id="MR6-hp-jIY"/>
                                                     <constraint firstItem="G3c-pO-nua" firstAttribute="leading" secondItem="tbd-Rw-U0X" secondAttribute="leading" constant="15" id="Xbm-SR-X6b"/>
                                                     <constraint firstAttribute="bottom" secondItem="G3c-pO-nua" secondAttribute="bottom" constant="15" id="YUi-fF-pLk"/>
-                                                    <constraint firstAttribute="height" constant="585" id="z1B-P0-S3g"/>
+                                                    <constraint firstAttribute="height" constant="425" id="z1B-P0-S3g" userLabel="height = 425"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -179,6 +179,9 @@
                                                 <state key="normal" title="CALCULATE">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculateBtnHandler:" destination="ubw-7Y-xYL" eventType="touchUpInside" id="C6A-lo-Ku5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -210,11 +213,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HlX-h3-fbb"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="gqN-kc-Taw"/>
+                    <tabBarItem key="tabBarItem" title="Loan" image="Loan" id="gqN-kc-Taw"/>
+                    <connections>
+                        <outlet property="customNumpad" destination="J5g-rz-jVy" id="0ND-yW-lpL"/>
+                        <outlet property="interestTxtFld" destination="QF5-b0-nEH" id="Vpf-Gp-ApY"/>
+                        <outlet property="loanAmountTxtFld" destination="AyH-Sq-opL" id="aIf-Vh-V6z"/>
+                        <outlet property="noOfPaymentsTxtFld" destination="ZMF-Tj-rA9" id="moq-Us-Mpj"/>
+                        <outlet property="paymentTxtFld" destination="DbP-N1-8RT" id="fnP-pN-vp6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFd-cd-8L8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-295.19999999999999" y="823.53823088455783"/>
+            <point key="canvasLocation" x="-306" y="824"/>
         </scene>
         <!--Mortgage-->
         <scene sceneID="43c-F3-cqa">
@@ -231,33 +241,34 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qah-M0-6E7" userLabel="Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="425"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="74V-1p-EkA" userLabel="Master Stack View">
-                                                        <rect key="frame" x="15" y="15" width="345" height="460"/>
+                                                        <rect key="frame" x="15" y="15" width="345" height="395"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sSY-MB-x7n" userLabel="Mortgage Stack View">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sSY-MB-x7n" userLabel="Mortgage Stack View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortgage" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcI-L0-1Jt">
-                                                                        <rect key="frame" x="120" y="0.0" width="105.5" height="84"/>
+                                                                        <rect key="frame" x="120" y="0.0" width="105.5" height="71"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BLf-n4-wWu" userLabel="Mortgage Amount Stack View">
-                                                                <rect key="frame" x="0.0" y="94" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BLf-n4-wWu" userLabel="Mortgage Amount Stack View">
+                                                                <rect key="frame" x="0.0" y="81" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortgage Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUj-oc-zsN" userLabel="Mortgage Amount lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaT-Yb-Aei" userLabel="Mortgage Amount txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaT-Yb-Aei" userLabel="Mortgage Amount txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
@@ -266,17 +277,18 @@
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0Mq-Lk-Eom" userLabel="Interest Stack View">
-                                                                <rect key="frame" x="0.0" y="188" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Mq-Lk-Eom" userLabel="Interest Stack View">
+                                                                <rect key="frame" x="0.0" y="162" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-jA-bix" userLabel="Interest lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6C-hh-Q2j" userLabel="Interest txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6C-hh-Q2j" userLabel="Interest txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
@@ -285,17 +297,18 @@
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-Xy-7PE" userLabel="Payment Stack View">
-                                                                <rect key="frame" x="0.0" y="282" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wYb-Xy-7PE" userLabel="Payment Stack View">
+                                                                <rect key="frame" x="0.0" y="243" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYb-RL-iYt" userLabel="Payment lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuP-7f-L1c" userLabel="Payment txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="100" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fuP-7f-L1c" userLabel="Payment txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
@@ -304,17 +317,18 @@
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-Rb-F9x" userLabel="Number of Years Stack View">
-                                                                <rect key="frame" x="0.0" y="376" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fdY-Rb-F9x" userLabel="Number of Years Stack View">
+                                                                <rect key="frame" x="0.0" y="324" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KXY-GK-0RQ" userLabel="Number of Years lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGq-3t-LSq" userLabel="Number of Years txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="15" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGq-3t-LSq" userLabel="Number of Years txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                                                                         <connections>
@@ -332,7 +346,7 @@
                                                     <constraint firstItem="74V-1p-EkA" firstAttribute="leading" secondItem="Qah-M0-6E7" secondAttribute="leading" constant="15" id="LAv-xt-QvW"/>
                                                     <constraint firstAttribute="trailing" secondItem="74V-1p-EkA" secondAttribute="trailing" constant="15" id="M0n-SH-Ukt"/>
                                                     <constraint firstItem="74V-1p-EkA" firstAttribute="top" secondItem="Qah-M0-6E7" secondAttribute="top" constant="15" id="Q3M-oe-6Ft"/>
-                                                    <constraint firstAttribute="height" constant="490" id="hSC-08-y6b"/>
+                                                    <constraint firstAttribute="height" constant="425" id="hSC-08-y6b"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -417,7 +431,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yNh-jl-fO0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="87v-rV-NXr"/>
+                    <tabBarItem key="tabBarItem" title="Mortgage" image="Mortgage" id="87v-rV-NXr"/>
                     <connections>
                         <outlet property="customNumpad" destination="8rw-hM-Ei1" id="UZI-bg-zcE"/>
                         <outlet property="interestTxtFld" destination="Q6C-hh-Q2j" id="wWa-9N-ApP"/>
@@ -428,7 +442,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vi0-bM-VEd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="556" y="823.53823088455783"/>
+            <point key="canvasLocation" x="553" y="824"/>
         </scene>
         <!--Savings-->
         <scene sceneID="wfw-Sd-CRf">
@@ -445,132 +459,189 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVP-pe-DqI" userLabel="Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="775"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="749"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t88-PQ-OeN" userLabel="Master Stack View">
-                                                        <rect key="frame" x="15" y="15" width="345" height="745"/>
+                                                        <rect key="frame" x="15" y="15" width="345" height="719"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="u29-Hk-Sya">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="u29-Hk-Sya" userLabel="Savings Stack View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Savings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Upv-AN-KXr">
-                                                                        <rect key="frame" x="129.5" y="0.0" width="86" height="84.5"/>
+                                                                        <rect key="frame" x="129.5" y="0.0" width="86" height="71"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ud8-K7-H5b">
-                                                                <rect key="frame" x="0.0" y="94.5" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ud8-K7-H5b" userLabel="Principal Amount Stack View">
+                                                                <rect key="frame" x="0.0" y="81" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Principal Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFi-Tc-T2d" userLabel="Principal Amount lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-YH-jvM" userLabel="Principal Amount txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 100000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-YH-jvM" userLabel="Principal Amount txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="principalAmountTxtFldChanged:" destination="Re8-yp-sC4" eventType="editingChanged" id="OXQ-qQ-f8c"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kEG-aa-kGm">
-                                                                <rect key="frame" x="0.0" y="189" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kEG-aa-kGm" userLabel="Interest Stack View">
+                                                                <rect key="frame" x="0.0" y="162" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GYi-Hf-0Nz" userLabel="Interest lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52U-kK-dDg" userLabel="Interest txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52U-kK-dDg" userLabel="Interest txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="interestTxtFldChanged:" destination="Re8-yp-sC4" eventType="editingChanged" id="4nl-zh-oY3"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-yo-eBG">
-                                                                <rect key="frame" x="0.0" y="283" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BdE-yo-eBG" userLabel="Payment Stack View">
+                                                                <rect key="frame" x="0.0" y="243" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixS-fw-NKc" userLabel="Payment lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-nS-QVj" userLabel="Payment txtFld">
-                                                                        <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 500" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SFa-nS-QVj" userLabel="Payment txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="paymentTxtFldChanged:" destination="Re8-yp-sC4" eventType="editingChanged" id="weD-lp-FYL"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="XtD-01-v2I">
-                                                                <rect key="frame" x="0.0" y="377.5" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XtD-01-v2I" userLabel="Compounds per Year Stack View">
+                                                                <rect key="frame" x="0.0" y="324" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compounds per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VwB-x7-pPE" userLabel="Compounds per Year lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-G9-paa" userLabel="Compounds per Year txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-G9-paa" userLabel="Compounds per Year txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="compoundsPerYearTxtFldChanged:" destination="Re8-yp-sC4" eventType="editingChanged" id="N0r-Tg-kDi"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="bOQ-yD-Sou">
-                                                                <rect key="frame" x="0.0" y="472" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bOQ-yD-Sou" userLabel="Payments per Year Stack View">
+                                                                <rect key="frame" x="0.0" y="405" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payments per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlr-rX-BqD" userLabel="Payments per Year lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcI-WK-X5f" userLabel="Payments per Year txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcI-WK-X5f" userLabel="Payments per Year txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="paymentsPerYearTxtFldChanged:" destination="Re8-yp-sC4" eventType="editingChanged" id="j9Z-ww-w2L"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CMf-Co-5qw">
-                                                                <rect key="frame" x="0.0" y="566.5" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CMf-Co-5qw" userLabel="Future Value Stack View">
+                                                                <rect key="frame" x="0.0" y="486" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ald-I9-gnR" userLabel="Future Value lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gL8-r6-IOH" userLabel="Future Value txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 250000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gL8-r6-IOH" userLabel="Future Value txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="futureValueTxtFldChanged:" destination="Re8-yp-sC4" eventType="editingChanged" id="L8T-xR-ZZA"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yPW-Uv-zeZ">
-                                                                <rect key="frame" x="0.0" y="660.5" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yPW-Uv-zeZ" userLabel="Number of Years Stack View">
+                                                                <rect key="frame" x="0.0" y="567" width="345" height="71"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Payments - Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gow-zN-K6z" userLabel="Number of Payments lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gow-zN-K6z" userLabel="Number Of Years lbl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-Px-vfG" userLabel="Number of Payments txtFld">
-                                                                        <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hyj-Px-vfG" userLabel="Number Of Years txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="noOfYearsTxtFldChanged:" destination="Re8-yp-sC4" eventType="editingChanged" id="qgY-UP-Qzp"/>
+                                                                        </connections>
                                                                     </textField>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dq7-nB-Apv" userLabel="Payment Due Stack View">
+                                                                <rect key="frame" x="0.0" y="648" width="345" height="71"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Due at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlf-vk-66e" userLabel="Payment Due lbl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-mQ-L1b" userLabel="Payment Period Stack View">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <subviews>
+                                                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C3y-xT-Du7" userLabel="Payment Due switch">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="172" height="33"/>
+                                                                                <color key="onTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <connections>
+                                                                                    <action selector="paymentPeriodSwitch:" destination="Re8-yp-sC4" eventType="valueChanged" id="bZ4-g1-XlZ"/>
+                                                                                </connections>
+                                                                            </switch>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VlI-5q-b3G" userLabel="Payment Period lbl">
+                                                                                <rect key="frame" x="175" y="0.0" width="170" height="33"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
@@ -580,7 +651,7 @@
                                                 <constraints>
                                                     <constraint firstItem="t88-PQ-OeN" firstAttribute="top" secondItem="IVP-pe-DqI" secondAttribute="top" constant="15" id="4Zc-tc-WXN"/>
                                                     <constraint firstAttribute="bottom" secondItem="t88-PQ-OeN" secondAttribute="bottom" constant="15" id="5FI-kt-gbF"/>
-                                                    <constraint firstAttribute="height" constant="775" id="eza-HH-k4X"/>
+                                                    <constraint firstAttribute="height" constant="749" id="eza-HH-k4X"/>
                                                     <constraint firstItem="t88-PQ-OeN" firstAttribute="leading" secondItem="IVP-pe-DqI" secondAttribute="leading" constant="15" id="kLI-zX-lu0"/>
                                                     <constraint firstAttribute="trailing" secondItem="t88-PQ-OeN" secondAttribute="trailing" constant="15" id="sUG-Tw-ZH0"/>
                                                 </constraints>
@@ -634,6 +705,9 @@
                                                 <state key="normal" title="CALCULATE">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculateBtnHandler:" destination="Re8-yp-sC4" eventType="touchUpInside" id="sb0-Oe-xoc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -665,11 +739,23 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WZK-bW-ykj"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="svh-x4-JSz"/>
+                    <tabBarItem key="tabBarItem" title="Savings" image="Savings" id="svh-x4-JSz"/>
+                    <connections>
+                        <outlet property="compoundsPerYearTxtFld" destination="UNa-G9-paa" id="G7w-78-UEH"/>
+                        <outlet property="customNumpad" destination="9uJ-Xl-1Wm" id="K0S-wt-khR"/>
+                        <outlet property="futureValueTxtFld" destination="gL8-r6-IOH" id="gA9-Hn-jQC"/>
+                        <outlet property="interestTxtFld" destination="52U-kK-dDg" id="aGh-k6-iSD"/>
+                        <outlet property="noOfYearsTxtFld" destination="hyj-Px-vfG" id="Kha-qL-XhS"/>
+                        <outlet property="paymentPeriodLbl" destination="VlI-5q-b3G" id="Vxs-8r-jgz"/>
+                        <outlet property="paymentPeriodSwitch" destination="C3y-xT-Du7" id="NTi-6U-l6n"/>
+                        <outlet property="paymentTxtFld" destination="SFa-nS-QVj" id="hNn-dW-zSA"/>
+                        <outlet property="paymentsPerYearTxtFld" destination="RcI-WK-X5f" id="76S-Wz-I0M"/>
+                        <outlet property="principalAmountTxtFld" destination="ulE-YH-jvM" id="sif-iC-wmF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osh-bg-kzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1124" y="823.53823088455783"/>
+            <point key="canvasLocation" x="-1174" y="824"/>
         </scene>
         <!--Compound Interest Savings-->
         <scene sceneID="C7G-7X-hwo">
@@ -686,115 +772,119 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="340"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AbO-wj-0L8" userLabel="Content View">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="680"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="505"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BSg-mi-QB4" userLabel="Master Stack View">
-                                                        <rect key="frame" x="15" y="15" width="345" height="650"/>
+                                                        <rect key="frame" x="15" y="15" width="345" height="475"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-xJ-3T3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-xJ-3T3" userLabel="Compound interest Savings Stack View">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compound Interest Savings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TVQ-Z9-fa1">
-                                                                        <rect key="frame" x="23.5" y="0.0" width="298" height="84.5"/>
+                                                                        <rect key="frame" x="23.5" y="0.0" width="298" height="71"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="FZh-7x-cBc">
-                                                                <rect key="frame" x="0.0" y="94.5" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FZh-7x-cBc" userLabel="Present Value Stack View">
+                                                                <rect key="frame" x="0.0" y="81" width="345" height="70.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Present Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-Kg-l6f" userLabel="Present Value lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kO-lH-e27" userLabel="Present Value txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 5000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4kO-lH-e27" userLabel="Present Value txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="32.5"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="presentValueTxtFldChanged:" destination="FmZ-tK-055" eventType="editingChanged" id="VDo-QL-eTv"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Q08-9U-78e">
-                                                                <rect key="frame" x="0.0" y="188.5" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Q08-9U-78e" userLabel="Future Value Stack View">
+                                                                <rect key="frame" x="0.0" y="161.5" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5m-oq-v06" userLabel="Future Value lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVs-uT-cAq" userLabel="Future Value txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41.5"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ 10000" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVs-uT-cAq" userLabel="Future Value txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="futureValueTxtFldChanged:" destination="FmZ-tK-055" eventType="editingChanged" id="6u9-IO-YDo"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="9F4-8f-NfR">
-                                                                <rect key="frame" x="0.0" y="283" width="345" height="84"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9F4-8f-NfR" userLabel="Interest Stack View">
+                                                                <rect key="frame" x="0.0" y="242.5" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJK-wl-jxw" userLabel="Interest lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-eu-cSq" userLabel="Interest txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NGB-eu-cSq" userLabel="Interest txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="interestTxtFldChanged:" destination="FmZ-tK-055" eventType="editingChanged" id="F29-xu-Rjj"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="j69-yT-rCC">
-                                                                <rect key="frame" x="0.0" y="377" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uAl-hi-imB" userLabel="Number Of Years Stack View">
+                                                                <rect key="frame" x="0.0" y="323.5" width="345" height="70.5"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAu-GX-2UE" userLabel="Payment lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41.5"/>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number Of Years" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-wp-0I8" userLabel="Number Of Years lbl">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nrw-L6-CrF" userLabel="Payment txtFld">
-                                                                        <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEw-lv-GEz" userLabel="Number Of Years txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="32.5"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="noOfYearsTxtFldChanged:" destination="FmZ-tK-055" eventType="editingChanged" id="kuy-AW-7ni"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uAl-hi-imB">
-                                                                <rect key="frame" x="0.0" y="471.5" width="345" height="84"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No. Payments per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-wp-0I8" userLabel="No. Payments per Year lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NEw-lv-GEz" userLabel="No. Payments per Year txtFld">
-                                                                        <rect key="frame" x="0.0" y="43" width="345" height="41"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                                                    </textField>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hhK-JN-dxf">
-                                                                <rect key="frame" x="0.0" y="565.5" width="345" height="84.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hhK-JN-dxf" userLabel="Compounds per Year Stack View">
+                                                                <rect key="frame" x="0.0" y="404" width="345" height="71"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compounds per Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qkZ-yq-r9p" userLabel="Compounds per Year lbl">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="41.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="33"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-eS-exc" userLabel="Compounds per Year txtFld">
-                                                                        <rect key="frame" x="0.0" y="43.5" width="345" height="41"/>
+                                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-eS-exc" userLabel="Compounds per Year txtFld">
+                                                                        <rect key="frame" x="0.0" y="38" width="345" height="33"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                                        <connections>
+                                                                            <action selector="compoundsPerYearTxtFldChanged:" destination="FmZ-tK-055" eventType="editingChanged" id="fDq-vO-dt2"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                             </stackView>
@@ -804,7 +894,7 @@
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="bottom" secondItem="BSg-mi-QB4" secondAttribute="bottom" constant="15" id="28w-nS-1zH"/>
-                                                    <constraint firstAttribute="height" constant="680" id="3gv-kc-m6w"/>
+                                                    <constraint firstAttribute="height" constant="505" id="3gv-kc-m6w"/>
                                                     <constraint firstItem="BSg-mi-QB4" firstAttribute="leading" secondItem="AbO-wj-0L8" secondAttribute="leading" constant="15" id="B1B-gL-4UB"/>
                                                     <constraint firstItem="BSg-mi-QB4" firstAttribute="top" secondItem="AbO-wj-0L8" secondAttribute="top" constant="15" id="GhM-Nl-VLa"/>
                                                     <constraint firstAttribute="trailing" secondItem="BSg-mi-QB4" secondAttribute="trailing" constant="15" id="lTD-mx-24j"/>
@@ -859,6 +949,9 @@
                                                 <state key="normal" title="CALCULATE">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="calculateBtnHandler:" destination="FmZ-tK-055" eventType="touchUpInside" id="FPY-Xf-oyI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -889,8 +982,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ib8-cB-0B2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="iA2-7i-C2E" userLabel="Compound Interest Savings Item"/>
+                    <tabBarItem key="tabBarItem" title="CIS" image="Compoundinterest" id="iA2-7i-C2E" userLabel="Compound Interest Savings Item"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="compoundsPerYearTxtFld" destination="Hi5-eS-exc" id="9sf-Mz-lxb"/>
+                        <outlet property="customNumpad" destination="WFl-NJ-nXy" id="n53-WA-AaE"/>
+                        <outlet property="futureValueTxtFld" destination="LVs-uT-cAq" id="UN9-pd-LTF"/>
+                        <outlet property="interestTxtFld" destination="NGB-eu-cSq" id="wva-gj-L5U"/>
+                        <outlet property="noOfYearsTxtFld" destination="NEw-lv-GEz" id="cKY-bN-pVD"/>
+                        <outlet property="presentValueTxtFld" destination="4kO-lH-e27" id="JIV-Pc-eUv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DaC-qR-RDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -904,6 +1005,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="FmZ-tK-055" kind="relationship" relationship="viewControllers" id="bUX-33-Slh"/>
@@ -917,46 +1020,170 @@
             </objects>
             <point key="canvasLocation" x="-733" y="-9"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="NSv-H4-PXm">
+        <!--Help-->
+        <scene sceneID="Wd6-GO-Wuf">
             <objects>
-                <tableViewController id="VlC-ga-dzm" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kFy-pf-OYH">
+                <viewController id="1mQ-yy-3uW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oUp-Me-2ay">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWp-Hk-bzR">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSO-SH-ma9" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zri-2T-p5M" userLabel="Master Stack View">
+                                                <rect key="frame" x="15" y="15" width="345" height="1470"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bje-MS-25e">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="286"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduction" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMO-11-bUZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="mBR-zY-zk0" userLabel="Introduction Text View">
+                                                                <rect key="frame" x="0.0" y="20.5" width="345" height="265.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">This a finance Application for IOS platform with certain features related to banking to ease up the work. This application has the capability of undertaking typical financial calculations such as savings, loans, and mortgages. More details about the four types of financial calculations are discussed in the below appropriate sections. This application will also keep a last record of the user data within the application. The instructions to how to use the application is given below in detail within the relevant sections.</string>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GZD-nb-jjP">
+                                                        <rect key="frame" x="0.0" y="296" width="345" height="286"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compound Interest Savings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfi-mL-2CP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Dtm-5b-jV6" userLabel="Compound Interest Savings Text View">
+                                                                <rect key="frame" x="0.0" y="20.5" width="345" height="265.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">Compound Interest Savings is a common financial calculation which is interest you earn on both your original deposit and on the interest you continue to accumulate. In order to make calculations there are few parameters that need to be defined and the parameters are present value, future value, interest, number of years, compounds per year (compound interest will be considered to be monthly). In this application in order to find value for a specific parameter the user needs to fill all the fields except for the field that the user needs an answer for and click the calculate button and the field left blank will be filled with the answer for the query made by the user.</string>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R2Z-ca-1wD">
+                                                        <rect key="frame" x="0.0" y="592" width="345" height="286"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Savings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-ZG-gaB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="iai-4z-lK4" userLabel="Savings Text View">
+                                                                <rect key="frame" x="0.0" y="20.5" width="345" height="265.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">Savings is typically paid at a modest interest rate, their safety and reliability make them a great option for parking cash you want available for short-term needs. In order to make calculations there are few parameters that need to be defined and the parameters are principal amount, future value, interest, payment,  number of years, payment per year, compounds per year (compound interest will be considered to be monthly), payment due (end / beginning). In this application in order to find value for a specific parameter the user needs to fill all the fields except for the field that the user needs an answer for and click the calculate button and the field left blank will be filled with the answer for the query made by the user.</string>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="z3Y-O0-T6o">
+                                                        <rect key="frame" x="0.0" y="888" width="345" height="286"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGu-VP-era">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Alh-f0-gGz" userLabel="Loan Text View">
+                                                                <rect key="frame" x="0.0" y="20.5" width="345" height="265.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">A bank loan provides medium or long-term finance. The bank sets the fixed period over which the loan is provided (1, 5 or 10 years), the rate of interest and the timing and amount of repayments. In order to make calculations there are few parameters that need to be defined and the parameters are loan amount, annual interest rate, payment, number of payments. In this application in order to find value for a specific parameter the user needs to fill all the fields except for the field that the user needs an answer for and click the calculate button and the field left blank will be filled with the answer for the query made by the user.</string>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fAR-N1-xoe">
+                                                        <rect key="frame" x="0.0" y="1184" width="345" height="286"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mortgage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2um-MK-6kq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="345" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1Sz-In-zLw" userLabel="Mortgage Text View">
+                                                                <rect key="frame" x="0.0" y="20.5" width="345" height="265.5"/>
+                                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <string key="text">Mortgage is a loan in which a debt instrument, secured by the collateral of specified real estate property, that the borrower is obliged to pay back with a predetermined set of payments with specified annual interest. In order to make calculations there are few parameters that need to be defined and the parameters are mortgage amount, annual interest rate, payment, number of years (period of time discussed in the agreement). In this application in order to find value for a specific parameter the user needs to fill all the fields except for the field that the user needs an answer for and click the calculate button and the field left blank will be filled with the answer for the query made by the user.</string>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="zri-2T-p5M" secondAttribute="bottom" constant="15" id="OUh-NM-t1q"/>
+                                            <constraint firstItem="zri-2T-p5M" firstAttribute="leading" secondItem="HSO-SH-ma9" secondAttribute="leading" constant="15" id="Ovm-Jp-7vs"/>
+                                            <constraint firstAttribute="height" constant="1500" id="PpG-M5-0eI"/>
+                                            <constraint firstItem="zri-2T-p5M" firstAttribute="top" secondItem="HSO-SH-ma9" secondAttribute="top" constant="15" id="X1i-sL-lkg"/>
+                                            <constraint firstAttribute="trailing" secondItem="zri-2T-p5M" secondAttribute="trailing" constant="15" id="wWh-KA-WxO"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HSO-SH-ma9" firstAttribute="width" secondItem="rVr-2h-QVh" secondAttribute="width" id="CUE-2g-osZ"/>
+                                    <constraint firstItem="HSO-SH-ma9" firstAttribute="top" secondItem="Kxl-hK-9b3" secondAttribute="top" id="Rwk-hF-uxz"/>
+                                    <constraint firstItem="HSO-SH-ma9" firstAttribute="leading" secondItem="Kxl-hK-9b3" secondAttribute="leading" id="fXA-2Q-CVG"/>
+                                    <constraint firstItem="HSO-SH-ma9" firstAttribute="bottom" secondItem="Kxl-hK-9b3" secondAttribute="bottom" id="gx4-th-hzl"/>
+                                    <constraint firstItem="HSO-SH-ma9" firstAttribute="trailing" secondItem="Kxl-hK-9b3" secondAttribute="trailing" id="xbV-tE-4rF"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Kxl-hK-9b3"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="rVr-2h-QVh"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wyZ-ZA-thx">
-                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wyZ-ZA-thx" id="7kn-Lh-heT">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="VlC-ga-dzm" id="KkO-IF-mCh"/>
-                            <outlet property="delegate" destination="VlC-ga-dzm" id="5kz-dW-I7c"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="PjG-nS-SEc"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KGt-5D-zaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="hWp-Hk-bzR" firstAttribute="leading" secondItem="XK6-C6-EAJ" secondAttribute="leading" id="6IZ-3G-AB1"/>
+                            <constraint firstItem="XK6-C6-EAJ" firstAttribute="trailing" secondItem="hWp-Hk-bzR" secondAttribute="trailing" id="O1y-hp-MfY"/>
+                            <constraint firstItem="hWp-Hk-bzR" firstAttribute="top" secondItem="XK6-C6-EAJ" secondAttribute="top" id="V9I-CT-egi"/>
+                            <constraint firstItem="XK6-C6-EAJ" firstAttribute="bottom" secondItem="hWp-Hk-bzR" secondAttribute="bottom" id="sEK-Ij-sag"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XK6-C6-EAJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Help" id="nTh-j6-vPR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6j-LL-0xQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="-9"/>
+            <point key="canvasLocation" x="1557.5999999999999" y="-9.4452773613193415"/>
         </scene>
-        <!--Help-->
+        <!--Help Navigation-->
         <scene sceneID="BUC-zr-Haw">
             <objects>
-                <navigationController title="Help" id="98i-Ab-8HE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="history" id="jLi-zG-6HY"/>
+                <navigationController title="Help" id="98i-Ab-8HE" userLabel="Help Navigation" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Help" image="Help" id="jLi-zG-6HY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GSD-qt-1tT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.70352157360406098" green="0.44585416487321899" blue="0.16174548937296543" alpha="0.7052921660958904" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="VlC-ga-dzm" kind="relationship" relationship="rootViewController" id="GfD-pQ-gJS"/>
+                        <segue destination="1mQ-yy-3uW" kind="relationship" relationship="rootViewController" id="sT1-Nf-YcH"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YII-1A-ASr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -964,4 +1191,11 @@
             <point key="canvasLocation" x="632" y="-9"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Compoundinterest" width="25" height="25"/>
+        <image name="Help" width="25" height="25"/>
+        <image name="Loan" width="25" height="25"/>
+        <image name="Mortgage" width="25" height="25"/>
+        <image name="Savings" width="25" height="25"/>
+    </resources>
 </document>

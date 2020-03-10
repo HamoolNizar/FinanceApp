@@ -13,7 +13,9 @@ class MortgageModel {
     var interest : Double?
     var payment : Double?
     var noOfYears : Double?
+    var interestCalculator = InterestRateCalculator()
     
+    /// Constructor
     init(mortgageAmount:Double?, interest:Double?, payement:Double?, noOfYears:Double?) {
         self.mortgageAmount = mortgageAmount
         self.interest = interest
@@ -21,6 +23,9 @@ class MortgageModel {
         self.noOfYears = noOfYears
     }
     
+    /// This function does the calculation to find out the Mortgage Amount.
+    ///
+    /// - Returns: Double value of the Mortgage Amount for the TextField
     func calculateMortgageAmount() -> Double {
         var mortgageAmount: Double
         
@@ -32,6 +37,9 @@ class MortgageModel {
         return mortgageAmount
     }
     
+    /// This function does the calculation to find out the Interest.
+    ///
+    /// - Returns: Double value of the Interest for the TextField
     func calculateInterest() -> Double {
         var interest: Double
         
@@ -39,10 +47,13 @@ class MortgageModel {
         let payment = self.payment!
         let noOfYears = self.noOfYears! * 12
         
-        interest = (payment * noOfYears) / (mortgageAmount * (noOfYears / 12))
+        interest = interestCalculator.calculateInterestRate(principalAmount: mortgageAmount, payement: payment, noOfPayments: noOfYears)
         return interest
     }
     
+    /// This function does the calculation to find out the Payment.
+    ///
+    /// - Returns: Double value of the Payment for the TextField
     func calculatePayment() -> Double {
         var payment: Double
         
@@ -54,6 +65,9 @@ class MortgageModel {
         return payment
     }
     
+    /// This function does the calculation to find out the Number of Years.
+    ///
+    /// - Returns: Double value of the Number of Years for the TextField
     func calculateNoOfYears() -> Double {
         var noOfYears: Double
                         
@@ -61,26 +75,27 @@ class MortgageModel {
         let interest = (self.interest! / 100) / 12
         let payment = self.payment!
                         
-//        noOfYears = (log((payment / interest) / ((payment / interest) - mortgageAmount)) / log(1 + interest))
-        noOfYears = payment / (mortgageAmount * interest)
-        return noOfYears
+        noOfYears = log((payment / interest) / ((payment / interest) - mortgageAmount)) / log(1 + interest)
+        return noOfYears / 12
     }
     
+    /// This function store all the data to the UserDefaults.
     func storeMortgageData(){
         let mortgageDefaults = UserDefaults.standard
 
         mortgageDefaults.set(self.mortgageAmount, forKey: "FinanceApp_MortgageData_mortgageAmount")
         mortgageDefaults.set(self.interest, forKey: "FinanceApp_MortgageData_interest")
         mortgageDefaults.set(self.payment, forKey: "FinanceApp_MortgageData_payment")
-        mortgageDefaults.set(self.noOfYears, forKey: "FinanceApp_MortgageData_numOfYears")
+        mortgageDefaults.set(self.noOfYears, forKey: "FinanceApp_MortgageData_noOfYears")
     }
     
+    /// This function retrieves all the data from the UserDefaults.
     func retrieveMortgageData(){
         let mortgageDefaults = UserDefaults.standard
         
         self.mortgageAmount = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_mortgageAmount") as? Double
         self.interest = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_interest") as? Double
         self.payment = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_payment") as? Double
-        self.noOfYears = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_numOfYears") as? Double
+        self.noOfYears = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_noOfYears") as? Double
     }
 }

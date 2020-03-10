@@ -9,78 +9,115 @@
 import Foundation
 
 class CompoundInterestSavingsModel {
-    var mortgageAmount : Double?
+    var presentValue : Double?
+    var futureValue : Double?
     var interest : Double?
-    var payment : Double?
     var noOfYears : Double?
+    var compoundsPerYear : Double?
     
-    init(mortgageAmount:Double?, interest:Double?, payement:Double?, noOfYears:Double?) {
-        self.mortgageAmount = mortgageAmount
+    /// Constructor
+    init(presentValue:Double?, futureValue:Double?, interest:Double?, noOfYears:Double?, compoundsPerYear:Double?) {
+        self.presentValue = presentValue
+        self.futureValue = futureValue
         self.interest = interest
-        self.payment = payement
         self.noOfYears = noOfYears
+        self.compoundsPerYear = compoundsPerYear
     }
     
-//    func calculateMortgageAmount() -> Double {
-//        var mortgageAmount: Double
-//
-//        let interest = (self.interest! / 100) / 12
-//        let payment = self.payment!
-//        let noOfYears = self.noOfYears! * 12
-//
-//        mortgageAmount = (payment * (pow(1 + interest, noOfYears) - 1)) / (interest * pow(1 + interest, noOfYears))
-//        return mortgageAmount
-//    }
-//
-//    func calculateInterest() -> Double {
-//        var interest: Double
-//
-//        let mortgageAmount = self.mortgageAmount!
-//        let payment = self.payment!
-//        let noOfYears = self.noOfYears! * 12
-//
-//        interest = (payment * noOfYears) / (mortgageAmount * (noOfYears / 12))
-//        return interest
-//    }
-//
-//    func calculatePayment() -> Double {
-//        var payment: Double
-//
-//        let mortgageAmount = self.mortgageAmount!
-//        let interest = (self.interest! / 100) / 12
-//        let noOfYears = self.noOfYears! * 12
-//
-//        payment = (mortgageAmount * (interest * pow(1 + interest, noOfYears))) / (pow(1 + interest, noOfYears) - 1)
-//        return payment
-//    }
-//
-//    func calculateNoOfYears() -> Double {
-//        var noOfYears: Double
-//
-//        let mortgageAmount = self.mortgageAmount!
-//        let interest = (self.interest! / 100) / 12
-//        let payment = self.payment!
-//
-////        noOfYears = (log((payment / interest) / ((payment / interest) - mortgageAmount)) / log(1 + interest))
-//        noOfYears = payment / (mortgageAmount * interest)
-//        return noOfYears
-//    }
-    
-    func storeMortgageData(){
-        let mortgageDefaults = UserDefaults.standard
-
-        mortgageDefaults.set(self.mortgageAmount, forKey: "FinanceApp_MortgageData_mortgageAmount")
-        mortgageDefaults.set(self.interest, forKey: "FinanceApp_MortgageData_interest")
-        mortgageDefaults.set(self.payment, forKey: "FinanceApp_MortgageData_payment")
-        mortgageDefaults.set(self.noOfYears, forKey: "FinanceApp_MortgageData_numOfYears")
-    }
-    
-    func retrieveMortgageData(){
-        let mortgageDefaults = UserDefaults.standard
+    /// This function does the calculation to find out the Present Value.
+    ///
+    /// - Returns: Double value of the Present Value for the TextField
+    func calculatePresentValue() -> Double {
+        var presentValue: Double
         
-        self.mortgageAmount = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_mortgageAmount") as? Double
-        self.interest = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_interest") as? Double
-        self.payment = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_payment") as? Double
-        self.noOfYears = mortgageDefaults.object(forKey: "FinanceApp_MortgageData_numOfYears") as? Double
+        let futureValue = self.futureValue!
+        let interest = (self.interest! / 100)
+        let noOfYears = self.noOfYears!
+        let compoundsPerYear = self.compoundsPerYear!
+        
+        presentValue = futureValue / pow((1 + (interest / compoundsPerYear)), compoundsPerYear * noOfYears)
+        return presentValue
+    }
+    
+    /// This function does the calculation to find out the Future Value.
+    ///
+    /// - Returns: Double value of the Future Value for the TextField
+    func calculateFutureValue() -> Double {
+        var futureValue: Double
+        
+        let presentValue = self.presentValue!
+        let interest = (self.interest! / 100)
+        let noOfYears = self.noOfYears!
+        let compoundsPerYear = self.compoundsPerYear!
+        
+        futureValue = presentValue * pow((1 + interest / compoundsPerYear), compoundsPerYear * noOfYears)
+        return futureValue
+    }
+    
+    /// This function does the calculation to find out the Interest.
+    ///
+    /// - Returns: Double value of the Interest for the TextField
+    func calculateInterest() -> Double {
+        var interest: Double
+        
+        let presentValue = self.presentValue!
+        let futureValue = self.futureValue!
+        let noOfYears = self.noOfYears!
+        let compoundsPerYear = self.compoundsPerYear!
+        
+        interest = compoundsPerYear * (pow((futureValue / presentValue), (1 / (compoundsPerYear * noOfYears))) - 1)
+        return interest * 100
+    }
+    
+    /// This function does the calculation to find out the Number of Years.
+    ///
+    /// - Returns: Double value of the Number of Years for the TextField
+    func calculateNoOfYears() -> Double {
+        var noOfYears: Double
+        
+        let presentValue = self.presentValue!
+        let futureValue = self.futureValue!
+        let interest = (self.interest! / 100)
+        let compoundsPerYear = self.compoundsPerYear!
+        
+        noOfYears = log(futureValue/presentValue) / (compoundsPerYear *  log(1 + (interest / compoundsPerYear)))
+        return noOfYears
+    }
+    
+    /// This function does the calculation to find out the Compounds per Year.
+    ///
+    /// - Returns: Double value of the Compounds per Year for the TextField
+    func calculateCompoundsPerYear() -> Double {
+        var compoundsPerYear: Double
+        
+        //        let presentValue = self.presentValue!
+        //        let futureValue = self.futureValue!
+        //        let interest = (self.interest! / 100) / 12
+        //        let noOfYears = self.noOfYears!
+        
+        compoundsPerYear = 12
+        return compoundsPerYear
+    }
+    
+    /// This function store all the data to the UserDefaults.
+    func storeCompoundInterestSavingsData(){
+        let compoundInterestSavingsDefaults = UserDefaults.standard
+        
+        compoundInterestSavingsDefaults.set(self.presentValue, forKey: "FinanceApp_CompoundInterestSavings_presentValue")
+        compoundInterestSavingsDefaults.set(self.futureValue, forKey: "FinanceApp_CompoundInterestSavings_futureValue")
+        compoundInterestSavingsDefaults.set(self.interest, forKey: "FinanceApp_CompoundInterestSavings_interest")
+        compoundInterestSavingsDefaults.set(self.noOfYears, forKey: "FinanceApp_CompoundInterestSavings_noOfYears")
+        compoundInterestSavingsDefaults.set(self.compoundsPerYear, forKey: "FinanceApp_CompoundInterestSavings_compoundsPerYear")
+    }
+    
+    /// This function retrieves all the data from the UserDefaults.
+    func retrieveCompoundInterestSavingsData(){
+        let compoundInterestSavingsDefaults = UserDefaults.standard
+        
+        self.presentValue = compoundInterestSavingsDefaults.object(forKey: "FinanceApp_CompoundInterestSavings_presentValue") as? Double
+        self.futureValue = compoundInterestSavingsDefaults.object(forKey: "FinanceApp_CompoundInterestSavings_futureValue") as? Double
+        self.interest = compoundInterestSavingsDefaults.object(forKey: "FinanceApp_CompoundInterestSavings_interest") as? Double
+        self.noOfYears = compoundInterestSavingsDefaults.object(forKey: "FinanceApp_CompoundInterestSavings_noOfYears") as? Double
+        self.compoundsPerYear = compoundInterestSavingsDefaults.object(forKey: "FinanceApp_CompoundInterestSavings_compoundsPerYear") as? Double
     }
 }
